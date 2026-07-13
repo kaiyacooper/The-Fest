@@ -64,7 +64,7 @@ GROUP BY fest_edition, year
 ORDER BY fest_edition;
 ```
 
-**Bands that played both Fest 15 (2016) AND Fest 23 (2025) — the true loyalists:**
+**Bands that played both Fest 15 (2016) AND Fest 23 (2025):**
 ```sql
 SELECT DISTINCT a1.band_name
 FROM band_appearances a1
@@ -91,14 +91,14 @@ FROM fest_editions
 ORDER BY year;
 ```
 
-**Bands with 3+ appearances (the Fest regulars):**
+**Bands with 3+ appearances (Fest regulars):**
 ```sql
 SELECT * FROM v_frequent_bands;
 ```
 
 ---
 
-## 📐 Schema diagram
+## Schema diagram
 
 ```
 fest_editions ──────────────────────────────────┐
@@ -144,16 +144,6 @@ venues                      top_performers          genres
 | [Grooveist](https://grooveist.com/lineups/the-fest-lineups/) | Most appearances leaderboard |
 | [Wikipedia](https://en.wikipedia.org/wiki/The_Fest) | Historical context, early edition details |
 | [MusicBrainz](https://musicbrainz.org/series/8487c823-b129-4d38-a677-400ae0531a27) | External IDs, official links |
-
----
-
-## Known gaps & extension ideas
-
-- **Fest 1–14 (2002–2015):** Edition metadata is complete, but band-level data is not in this dataset. The [r/thefest Reddit thread](https://www.reddit.com/r/thefest/comments/17tzn1u/) has community-compiled data for earlier years.
-- **Venue ↔ Concert linkage:** setlist.fm has individual venue-by-venue setlists per edition — could be used to add `venue_id` to each appearance row.
-- **Setlists:** setlist.fm tracks actual songs played per band per show — a natural next step.
-- **Headliners flag:** Could tag headliner bands per day for richer analysis.
-- **Geography:** Band hometowns could be added from MusicBrainz API.
 
 ---
 
