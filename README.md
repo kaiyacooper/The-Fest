@@ -1,5 +1,7 @@
 # The Fest Database
 
+<img width="160" height="148" alt="1781618797403" src="https://github.com/user-attachments/assets/ba7866e6-0e70-4e6d-8ccf-55454086099e" />
+
 A personal portfolio project — a relational MySQL database of **The Fest**, Gainesville, FL's independent underground punk festival (2002–2025).
 
 > *"THE FEST is an independent multiple-day, multiple-venue underground music festival held annually in Gainesville, FL. Established in 2002 with only 60 bands, four stages, and two days, THE FEST has experienced a massive growth rate and now is three days long, 15+ venues and over 350 bands."* — thefestfl.com
