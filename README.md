@@ -230,17 +230,4 @@ band_origins (map-ready view)
 
 ---
 
-## How this was built
-
-This project covers the full data pipeline from raw HTML to BI dashboard:
-
-1. **Web scraping** — Python (`requests`, `BeautifulSoup`) to pull concert and band data from Concert Archives, setlist.fm, and thefestfl.com
-2. **Data cleaning** — normalized band names, deduplicated appearances, handled missing data honestly
-3. **Database design** — 7-table MySQL schema with foreign keys, indexes, and pre-built analytical views
-4. **Hometown enrichment** — MusicBrainz and Wikipedia lookups to add city/lat/lon to 132 bands
-5. **Excel export** — `openpyxl` to generate a 9-sheet colour-coded workbook for non-SQL exploration
-6. **Power BI dashboard** — bubble map, bar chart, treemap, KPI cards, and year slicer built on top of the Excel data
-
----
-
 *Built July 2026 as a data engineering portfolio project. Not affiliated with The Fest or No Idea Records.*
