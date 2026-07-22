@@ -69,7 +69,7 @@ GROUP BY fest_edition, year
 ORDER BY fest_edition;
 ```
 
-**Bands that played both Fest 15 (2016) AND Fest 23 (2025) — the true loyalists:**
+**Bands that played both Fest 15 (2016) AND Fest 23 (2025):**
 ```sql
 SELECT DISTINCT a1.band_name
 FROM band_appearances a1
@@ -188,7 +188,7 @@ band_origins (map-ready view)
 |---|---|
 | `v_frequent_bands` | Bands with 3+ appearances, sorted by count |
 | `v_edition_summary` | Each edition with stage count, duration, band count |
-| `v_map_data` | All location-verified bands with lat/lon — ready for any BI tool |
+| `v_map_data` | All location-verified bands with lat/lon |
 | `v_bands_by_state` | Band count and total appearances grouped by US state |
 | `v_bands_by_country` | USA vs Canada vs UK breakdown |
 
@@ -210,11 +210,11 @@ band_origins (map-ready view)
 ## Known gaps & extension ideas
 
 - **Fest 1–14 (2002–2015):** Edition metadata is complete but full band lineups are not in this dataset. The [r/thefest community thread](https://www.reddit.com/r/thefest/comments/17tzn1u/) has compiled data for earlier years.
-- **110 bands without location data:** Smaller or newer acts where hometown could not be verified with confidence. Honesty over guessing — these are excluded from the map sheet rather than approximated.
-- **Venue ↔ concert linkage:** setlist.fm has individual venue-by-venue setlists per edition — a natural next step to add `venue_id` to each appearance row.
+- **110 bands without location data:** Smaller or newer acts where hometown could not be verified with confidence. These are excluded from the map sheet rather than approximated.
+- **Venue ↔ concert linkage:** setlist.fm has individual venue-by-venue setlists per edition, next step is to add `venue_id` to each appearance row.
 - **Setlists:** Actual songs played per band per show are tracked on setlist.fm.
 - **Headliner flag:** Tagging headliners per day would enable richer analysis.
-- **Attendance data:** Fest 23 is the only edition with a published attendance figure (9,197).
+- **Attendance data:** Fest 23 is the only edition I could find with a published attendance figure (9,197).
 
 ---
 
