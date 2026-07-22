@@ -918,9 +918,7 @@ INSERT INTO genres (genre_id,genre,performance_count) VALUES
   (10,'Metalcore',23);
 
 
--- ================================================================
 -- VIEWS
--- ================================================================
 
 CREATE OR REPLACE VIEW v_frequent_bands AS
 SELECT band_name, total_appearances, fest_editions, years_played,
@@ -963,9 +961,9 @@ FROM bands WHERE hometown_country IS NOT NULL
 GROUP BY hometown_country ORDER BY band_count DESC;
 
 
--- ================================================================
+
 -- EXAMPLE QUERIES
--- ================================================================
+
 
 -- Q1: Top 20 bands by appearances
 SELECT band_name, total_appearances, hometown_city, hometown_state,
